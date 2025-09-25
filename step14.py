@@ -1,0 +1,18 @@
+import string
+import secrets
+
+def generate_password():
+    # Define the possible characters for the password
+    letters = string.ascii_letters
+    digits = string.digits
+    symbols = string.punctuation
+
+    # Combine all characters
+    all_characters = letters + digits + symbols
+
+    password = ""
+    # Generate password
+    for i in range(12):
+        password += secrets.choice(all_characters)
+
+    return password
